@@ -1,0 +1,19 @@
+schema: '2.0'
+stages:
+  clean-data:
+    cmd: python3 scripts/data_scripts/clean_data.py data/raw/cars.csv
+    deps:
+    - path: data/raw/cars.csv
+      hash: md5
+      md5: b4ee52d5639362780e2db8592eef4ac7
+      size: 2699244
+    - path: scripts/data_scripts/clean_data.py
+      hash: md5
+      md5: 7f66aebe6c600700086a07a15f74d791
+      size: 2663
+    outs:
+    - path: data/stage1
+      hash: md5
+      md5: b9f25c1eb8b23f7cf70015811dd43399.dir
+      size: 2133971
+      nfiles: 1

@@ -1,0 +1,8 @@
+stages:
+  clean-data:
+    cmd: python3 scripts/data_scripts/clean_data.py data/raw/cars.csv
+    deps:
+    - data/raw/cars.csv
+    - scripts/data_scripts/clean_data.py
+    outs:
+    - data/stage1
