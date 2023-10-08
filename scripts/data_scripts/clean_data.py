@@ -13,7 +13,6 @@ f_input = sys.argv[1]
 f_output = os.path.join("data", "stage1", "cars.csv")
 os.makedirs(os.path.join("data", "stage1"), exist_ok=True)
 
-#df = pd.read_csv("../../data/raw/cars.csv", delimiter = ',')
 df = pd.read_csv(f_input, delimiter = ',')
 
 

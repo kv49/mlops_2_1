@@ -9,11 +9,28 @@ stages:
       size: 2699244
     - path: scripts/data_scripts/clean_data.py
       hash: md5
-      md5: 7f66aebe6c600700086a07a15f74d791
-      size: 2663
+      md5: ada171d9ca65305833f01d283328988e
+      size: 2601
     outs:
     - path: data/stage1
       hash: md5
       md5: b9f25c1eb8b23f7cf70015811dd43399.dir
       size: 2133971
+      nfiles: 1
+  get-features:
+    cmd: python3 scripts/data_scripts/get_features.py data/stage1/cars.csv
+    deps:
+    - path: data/stage1/cars.csv
+      hash: md5
+      md5: cdf3fbcad775615beead1eca3ca7307d
+      size: 2133971
+    - path: scripts/data_scripts/get_features.py
+      hash: md5
+      md5: 0e9fe32351e6e94aff7396f9f5d8c723
+      size: 1185
+    outs:
+    - path: data/stage2
+      hash: md5
+      md5: 75375c89c288ffa99b0957d2f032e05f.dir
+      size: 1356070
       nfiles: 1
