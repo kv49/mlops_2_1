@@ -1,0 +1,8 @@
+split:
+  split_ratio: 0.3
+  seed: 42
+
+train:
+  k: 9
+  weights: "distance"
+  seed: 42

@@ -13,3 +13,13 @@ stages:
     - scripts/data_scripts/get_features.py
     outs:
     - data/stage2
+  split:
+    cmd: python3 scripts/data_scripts/train_test_split.py data/stage2/cars.csv
+    deps:
+    - data/stage2/cars.csv
+    - scripts/data_scripts/train_test_split.py
+    params:
+    - split.seed
+    - split.split_ratio
+    outs:
+    - data/stage3
