@@ -3,6 +3,6 @@ split:
   seed: 42
 
 train:
-  k: 9
+  neighbours: 9
   weights: "distance"
   seed: 42

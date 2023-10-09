@@ -23,3 +23,13 @@ stages:
     - split.split_ratio
     outs:
     - data/stage3
+  train:
+    cmd: python3 scripts/model_scripts/dt.py data/stage3/train.csv model.pkl
+    deps:
+    - data/stage3/train.csv
+    - scripts/model_scripts/dt.py
+    params:
+    - train.neighbours
+    - train.seed
+    outs:
+    - models/model.pkl
